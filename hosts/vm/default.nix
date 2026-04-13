@@ -3,8 +3,7 @@
     ../../core
     ../../desktop-environments/plasma
 
-    ../../modules/base/cli
-    ../../modules/dev/cli
+    ../../modules/cli-essential
 
     ../../hardware/nvidia
   ];
