@@ -5,6 +5,5 @@
 
     ../../modules/cli-essential
 
-    ../../hardware/nvidia
   ];
 }
