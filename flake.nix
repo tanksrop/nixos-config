@@ -14,6 +14,7 @@
 
       modules = [
         ./hosts/desktop
+        ./hosts/vm
       ];
     };
   };
