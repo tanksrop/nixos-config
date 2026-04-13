@@ -4,6 +4,7 @@
     ../../core
     ../../desktop-environments/plasma
     ../../modules/cli-essential
+    ../../modules/gui-essential
   ];
 
   boot.loader.grub.enable = true;
