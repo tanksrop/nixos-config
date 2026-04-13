@@ -13,6 +13,7 @@
   boot.loader.grub.device = "/dev/vda";
 
   services.spice-vdagentd.enable = true;
+  services.spice-vdagent.enable = true;
 
   environment.systemPackages = with pkgs; [
     spice-vdagent
