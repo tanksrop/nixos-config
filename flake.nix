@@ -8,14 +8,24 @@
   outputs = { self, nixpkgs, ... }:
   let
     system = "x86_64-linux";
-  in {
-    nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
-      inherit system;
+  in
+  {
+    nixosConfigurations = {
+      desktop = nixpkgs.lib.nixosSystem {
+        inherit system;
 
-      modules = [
-        ./hosts/desktop
-        ./hosts/vm
-      ];
+        modules = [
+          ./hosts/desktop
+        ];
+      };
+      vm = nixpkgs.lib.nixosSystem {
+        inherit system;
+
+        modules = [
+          ./hosts/vm
+        ];
+      };
+
     };
   };
 }
