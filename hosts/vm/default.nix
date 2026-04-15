@@ -3,10 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../core
-    ../../desktop-environments/plasma
-    ../../modules/cli-essential
-    ../../modules/gui-essential
+    ../../profiles/desktop
   ];
 
   boot.loader.grub.enable = true;
