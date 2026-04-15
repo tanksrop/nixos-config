@@ -2,6 +2,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../profiles/desktop
+    ../../modules/hardware/nvidia
   ];
 
   boot.loader.systemd-boot.enable = true;
