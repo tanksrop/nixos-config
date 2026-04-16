@@ -3,18 +3,16 @@
 let
   hmDesktop = import ./home.nix;
 
-  normalUsers =
-    lib.attrNames (
-      lib.filterAttrs (_: u: u.isNormalUser or false)
-        config.users.users
-    );
+  users = [
+    "ben"
+  ];
 
   hmUsers =
     builtins.listToAttrs (
       map (u: {
         name = u;
         value = hmDesktop;
-      }) normalUsers
+      }) users
     );
 in
 {
