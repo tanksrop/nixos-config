@@ -5,7 +5,8 @@ let
 
   normalUsers =
     lib.attrNames (
-      lib.filterAttrs (_: u: u.isNormalUser or false) config.users.users
+      lib.filterAttrs (_: u: u.isNormalUser or false)
+        config.users.users
     );
 
   hmUsers =
@@ -25,6 +26,7 @@ in
   };
 
   security.rtkit.enable = true;
+
   xdg.portal.enable = true;
 
   home-manager = {
