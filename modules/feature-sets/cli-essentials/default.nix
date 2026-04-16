@@ -7,5 +7,6 @@
     wget
     neovim
     fastfetch
+    sl
   ];
 }
