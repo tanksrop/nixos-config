@@ -4,6 +4,6 @@
     ./apps/waybar.nix
     ./apps/fuzzel.nix
     ./apps/mako.nix
-    ./apps/tools.nix
+    ./tools.nix
   ];
 }
