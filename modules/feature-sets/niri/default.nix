@@ -1,35 +1,16 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, home-manager, ... }:
 
+let
+  hmDesktop = import ./home.nix;
+in
 {
   programs.niri.enable = true;
 
-  environment.systemPackages = with pkgs; [
-    kitty
-    fuzzel
-    waybar
-    mako
-    nautilus
-    wl-clipboard
-    grim
-    slurp
-    swaylock
-    swayidle
-    playerctl
-  ];
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
 
-  # Audio (modern standard)
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
+    users = lib.mapAttrs (_: _: hmDesktop)
+      (lib.filterAttrs (_: u: u.isNormalUser or false) config.users.users);
   };
-
-  security.rtkit.enable = true;
-
-  # Portals (important for browsers, file pickers, etc.)
-  xdg.portal.enable = true;
-
-  # Fonts (don’t skip this)
-  fonts.packages = with pkgs; [
-    dejavu_fonts
-  ];
 }
