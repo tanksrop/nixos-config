@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    moonlight
+    sunshine
     gamescope
   ];
 programs.steam = {
