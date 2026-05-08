@@ -12,5 +12,6 @@
     pulseaudio
     pavucontrol
     awww
+    xwayland-satellite
   ];
 }
