@@ -8,7 +8,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, ... }:
   let
     system = "x86_64-linux";
   in
@@ -18,7 +18,7 @@
         inherit system;
 
         specialArgs = {
-          inherit self nixpkgs home-manager;
+          inherit inputs self nixpkgs home-manager;
         };
 
         modules = [
@@ -28,6 +28,10 @@
 
       vm = nixpkgs.lib.nixosSystem {
         inherit system;
+
+        specialArgs = {
+          inherit inputs self nixpkgs home-manager;
+        };
 
         modules = [
           ./hosts/vm
