@@ -17,6 +17,7 @@ let
 in
 {
   programs.niri.enable = true;
+  programs.xwayland.enable = true;
 
   services.pipewire = {
     enable = true;
