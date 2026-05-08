@@ -3,5 +3,7 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
     initialPassword = "changeme";
+
+    shell = pkgs.fish;
   };
 }
