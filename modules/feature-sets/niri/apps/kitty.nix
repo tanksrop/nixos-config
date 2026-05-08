@@ -8,12 +8,12 @@
       font_family = "JetBrains Mono";
       font_size = 12;
 
-      background = "#000000";
+      background = "#1e1e2e";
       foreground = "#cdd6f4";
 
       cursor_shape = "block";
       scrollback_lines = 10000;
-      background_opacity = 0.85;
+      background_opacity = 0.80;
 
       enable_audio_bell = false;
     };
