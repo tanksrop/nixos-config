@@ -1,5 +1,6 @@
 {
   imports = [
+    inputs.spicetify-nix.nixosModules.spicetify
     ../../modules/common
     ../../modules/feature-sets/cli-essentials
     ../../modules/feature-sets/gui-essentials
