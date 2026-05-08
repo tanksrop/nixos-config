@@ -18,6 +18,8 @@
       enable_audio_bell = false;
     };
 
-    shell = "${pkgs.fish}/bin/fish";
+    extraConfig = ''
+      shell ${pkgs.fish}/bin/fish
+    '';
   };
 }
