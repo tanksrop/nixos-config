@@ -9,5 +9,7 @@
     swaylock
     swayidle
     nautilus
+    pulseaudio
+    pavucontrol
   ];
 }
