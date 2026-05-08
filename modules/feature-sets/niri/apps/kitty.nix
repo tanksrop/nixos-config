@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   programs.kitty = {
@@ -17,5 +17,7 @@
 
       enable_audio_bell = false;
     };
+
+    shell = "${pkgs.fish}/bin/fish";
   };
 }
