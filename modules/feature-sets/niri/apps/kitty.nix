@@ -8,7 +8,7 @@
       font_family = "JetBrains Mono";
       font_size = 12;
 
-      background = "#1e1e2e";
+      background = "#000000";
       foreground = "#cdd6f4";
 
       cursor_shape = "block";
