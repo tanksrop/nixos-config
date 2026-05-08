@@ -4,7 +4,7 @@
     extraGroups = [ "wheel" "networkmanager" ];
     initialPassword = "changeme";
 
-    shell = pkgs.fish;
+    shell = config.programs.fish.package;
   };
   programs.fish.enable = true;
 }
