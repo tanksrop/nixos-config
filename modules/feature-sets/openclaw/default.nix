@@ -1,9 +1,13 @@
 { config, pkgs, ... }:
 
 {
-  environment.systemPackages = [
-    (pkgs.ollama.override {
-      acceleration = "cuda";
-    })
-  ];
+  services.ollama = {
+    enable = true;
+
+    package = pkgs.ollama.overrideAttrs (old: {
+      buildInputs = old.buildInputs ++ [
+        pkgs.cudaPackages.cudatoolkit
+      ];
+    });
+  };
 }
