@@ -11,6 +11,6 @@
     nautilus
     pulseaudio
     pavucontrol
-    swww
+    awww
   ];
 }
