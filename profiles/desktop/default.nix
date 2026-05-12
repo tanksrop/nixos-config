@@ -12,5 +12,6 @@
     ../../modules/feature-sets/niri
     ../../modules/feature-sets/gaming
     ../../modules/feature-sets/openclaw
+    ../../modules/feature-sets/fonts
   ];
 }
