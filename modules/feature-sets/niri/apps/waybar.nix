@@ -26,7 +26,7 @@
           format = "󰕾 {volume}%";
         };
 
-        custom/spotify = {
+        "custom/spotify" = {
           exec = "playerctl metadata --format '{{artist}} - {{title}}'";
           interval = 0.5;
           max-length = 45;
