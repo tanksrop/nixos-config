@@ -20,8 +20,7 @@
         inherit system;
 
         specialArgs = {
-          inherit self nixpkgs home-manager;
-          inherit self nixpkgs zen-browser;
+          inherit self nixpkgs home-manager zen-browser;
         };
 
         modules = [
