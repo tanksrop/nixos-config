@@ -1,7 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
-  environment.systemPackages = with pkgs; [
-    zen-browser
-    spotify
+  environment.systemPackages = [
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+    pkgs.spotify
   ];
 }
