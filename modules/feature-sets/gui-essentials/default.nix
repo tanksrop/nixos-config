@@ -3,7 +3,7 @@
 {
   # system packages
   environment.systemPackages = [
-    # Zen browser flake package
+    # Zen Browser flake package
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     # Spotify needed for Spicetify
     pkgs.spotify
@@ -14,15 +14,8 @@
     inputs.spicetify-nix.nixosModules.default
   ];
 
-  # Enable Spicetify
+  # Enable Spicetify with default Nightlight theme
   services.spicetify.enable = true;
-
-  # Configure theme and extensions
-  services.spicetify.theme = "Catppuccin";
+  services.spicetify.theme = "Nightlight";
   services.spicetify.enableExtensions = true;
-
-  # Optional: path to custom theme for transparency
-  services.spicetify.customThemePath = "/home/ben/.config/spicetify/Themes/Catppuccin";
-
-  # You can also override the CSS in user.css inside that folder for transparency
 }
