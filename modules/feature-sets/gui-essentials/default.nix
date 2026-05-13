@@ -1,12 +1,22 @@
 { config, pkgs, inputs, ... }:
 
 {
-  environment.systemPackages = [
-    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-    pkgs.spotify
+  imports = [
+    inputs.spicetify-nix.nixosModules.spicetify
   ];
 
-  services.spicetify.enable = true;
-  services.spicetify.theme = "Catppuccin";
-  services.spicetify.enableExtensions = true;
+  environment.systemPackages = [
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+  ];
+
+  programs.spicetify = {
+    enable = true;
+    enabledExtensions = with inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system}.extensions; [
+      adblockify
+      hidePodcasts
+      shuffle
+    ];
+    theme = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system}.themes.catppuccin;
+    colorScheme = "mocha";
+  };
 }
