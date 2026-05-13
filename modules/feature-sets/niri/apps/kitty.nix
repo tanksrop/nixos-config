@@ -13,7 +13,7 @@
 
       cursor_shape = "block";
       scrollback_lines = 10000;
-      background_opacity = 0.5;
+      background_opacity = 0.25;
 
       enable_audio_bell = false;
     };
