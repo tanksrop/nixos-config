@@ -26,7 +26,6 @@
         };
 
         modules = [
-          inputs.spicetify-nix.nixosModules.default
           ./hosts/desktop
         ];
       };
