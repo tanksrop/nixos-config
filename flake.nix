@@ -21,6 +21,7 @@
 
         specialArgs = {
           inherit self nixpkgs home-manager;
+          inherit self nixpkgs zen-browser;
         };
 
         modules = [
