@@ -14,6 +14,6 @@
 
   # Enable Spicetify
   services.spicetify.enable = true;
-  services.spicetify.theme = "Catppuccin";
+  services.spicetify.theme = "nightlight";
   services.spicetify.enableExtensions = true;
 }
