@@ -21,10 +21,8 @@ in
       shuffle
     ];
 
-    thirdPartyThemes = with spicePkgs.themes; [
-      hazy
-    ];
 
+    themes.catppuccin;
     colorScheme = "mocha";
   };
 }
