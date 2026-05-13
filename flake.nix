@@ -10,7 +10,7 @@
     zen-browser.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, zen-browser, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, zen-browser, ... }:
   let
     system = "x86_64-linux";
   in
