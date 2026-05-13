@@ -1,8 +1,5 @@
 { config, pkgs, inputs, ... }:
 
-let
-  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
-in
 {
   imports = [
     inputs.spicetify-nix.nixosModules.spicetify
@@ -15,14 +12,14 @@ in
   programs.spicetify = {
     enable = true;
 
-    enabledExtensions = with spicePkgs.extensions; [
+    enabledExtensions = with inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system}.extensions; [
       adblockify
       hidePodcasts
       shuffle
     ];
 
+    theme = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system}.themes.catppuccin;
 
-    spicePkgs.themes.catppuccin;
     colorScheme = "mocha";
   };
 }
