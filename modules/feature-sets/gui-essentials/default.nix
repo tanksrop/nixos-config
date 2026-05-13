@@ -22,7 +22,7 @@ in
     ];
 
 
-    themes.catppuccin;
+    spicePkgs.themes.catppuccin;
     colorScheme = "mocha";
   };
 }
